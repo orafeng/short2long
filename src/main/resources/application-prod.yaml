@@ -1,0 +1,22 @@
+sys-config:
+  node: node01      #节点名称
+  headLen: 24       #增加报文头长（增加报文channelId+ip)
+  timeout: 60       #短连接通讯缓存超时时间
+
+ports:
+  portList:
+    - 6666    #对外服务端口1
+    - 7777    #对外服务端口2
+
+hosts:
+  hostList:
+    - host: 127.0.0.1     #长连接地址1
+      port: 8888
+    - host: 127.0.0.1     #长连接地址2
+      port: 9999
+
+logging:
+  config: classpath:logback-spring.xml
+  file:
+    path: /home/app/logs/    #日志文件路径
+
